@@ -3,7 +3,7 @@
 A pixel-perfect, responsive landing page inspired by Zomato. This project focuses on the food and nightlife scene in Chennai, offering a clean user interface with interactive elements and smooth animations.
 
 ## 🚀 Live Demo
-[Insert your GitHub Pages link here]
+[https://gowthamoffll.github.io/zomato-landing-page-replica/]
 
 ## ✨ Features
 
