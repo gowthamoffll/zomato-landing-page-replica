@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zomato — Discover the best food in Chennai</title>
+  <link rel="icon" type="image/x-icon" href="./Image/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- ── STICKY NAV (injected by JS, defined here for no-JS fallback) ── -->
+  <nav class="sticky-nav" id="sticky-nav" aria-label="Site navigation">
+    <span class="sticky-logo">zomato</span>
+    <div class="sticky-actions">
+      <button class="btn-ghost" id="sticky-login-btn">Login</button>
+      <button class="btn-solid" id="sticky-signup-btn">Sign Up</button>
+    </div>
+  </nav>
+
+  <!-- ── HERO HEADER ── -->
+  <header class="hero" role="banner">
+    <div class="hero-top-bar">
+      <span class="get-app-link">Get the App</span>
+      <div class="hero-auth-btns">
+        <button class="btn-ghost" id="login-btn">Login</button>
+        <button class="btn-solid" id="signup-btn">Sign Up</button>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="hero-logo">zomato</h1>
+      <p class="hero-tagline">Discover the best food &amp; drinks in Chennai</p>
+
+      <div class="search-wrapper">
+        <div class="search-location">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span id="location-label">Custom Colony</span>
+        </div>
+        <div class="search-divider"></div>
+        <div class="search-input-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input
+            type="text"
+            id="main-search"
+            placeholder="Search for restaurant, cuisine or dish"
+            aria-label="Search restaurants"
+            autocomplete="off"
+          />
+          <button class="search-clear" id="search-clear" aria-label="Clear search" title="Clear">&#x2715;</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── CATEGORY CARDS ── -->
+  <section class="section category-section" aria-label="Browse categories">
+    <div class="section-inner">
+      <h2 class="section-title">What are you looking for?</h2>
+      <div class="card-grid">
+
+        <article class="cat-card" data-label="Order Food Online" tabindex="0" role="button" aria-label="Order Food Online">
+          <div class="cat-card-img-wrap">
+            <img src="./Image/food online.jpg" alt="Order Food Online" loading="lazy" />
+          </div>
+          <p class="cat-card-title">Order Food Online</p>
+        </article>
+
+        <article class="cat-card" data-label="Go for Meal" tabindex="0" role="button" aria-label="Dine Out">
+          <div class="cat-card-img-wrap">
+            <img src="./Image/go meal.jpg" alt="Go for a Meal" loading="lazy" />
+          </div>
+          <p class="cat-card-title">Dine Out</p>
+        </article>
+
+        <article class="cat-card" data-label="Night Life" tabindex="0" role="button" aria-label="Nightlife">
+          <div class="cat-card-img-wrap">
+            <img src="./Image/nigth.jpg" alt="Night Life" loading="lazy" />
+          </div>
+          <p class="cat-card-title">Nightlife</p>
+        </article>
+
+        <article class="cat-card" data-label="Zomato Pro" tabindex="0" role="button" aria-label="Zomato Pro">
+          <div class="cat-card-img-wrap">
+            <img src="./Image/Zomato.png" alt="Zomato Pro" loading="lazy" />
+          </div>
+          <p class="cat-card-title">Zomato Pro</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COLLECTIONS ── -->
+  <section class="section collections-section" aria-label="Curated collections">
+    <div class="section-inner">
+      <div class="collections-header">
+        <div>
+          <h2 class="section-title">Collections</h2>
+          <p class="collections-sub">Curated lists of top restaurants, cafes, pubs &amp; bars in Chennai</p>
+        </div>
+        <button class="all-collections-btn" id="all-collections-btn" aria-label="View all collections">
+          All Collections in Chennai <span class="arrow">→</span>
+        </button>
+      </div>
+
+      <div class="collections-grid">
+
+        <article class="col-card" data-label="Newly Opened" tabindex="0" role="button">
+          <img src="./Image/hotel.jpg" alt="Newly Opened restaurants" loading="lazy" />
+          <div class="col-card-overlay">
+            <h3>Newly Opened</h3>
+            <p>5 places <span class="arrow">→</span></p>
+          </div>
+        </article>
+
+        <article class="col-card" data-label="Best of Chennai" tabindex="0" role="button">
+          <img src="./Image/chennai.jpg" alt="Best of Chennai" loading="lazy" />
+          <div class="col-card-overlay">
+            <h3>Best of Chennai</h3>
+            <p>89 places <span class="arrow">→</span></p>
+          </div>
+        </article>
+
+        <article class="col-card" data-label="Trending This Week" tabindex="0" role="button">
+          <img src="./Image/kitchen.jpg" alt="Trending this week" loading="lazy" />
+          <div class="col-card-overlay">
+            <h3>Trending This Week</h3>
+            <p>30 places <span class="arrow">→</span></p>
+          </div>
+        </article>
+
+        <article class="col-card" data-label="Top Picks" tabindex="0" role="button">
+          <img src="./Image/food online.jpg" alt="Top Picks" loading="lazy" />
+          <div class="col-card-overlay">
+            <h3>Top Picks</h3>
+            <p>12 places <span class="arrow">→</span></p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LOCALITIES ── -->
+  <section class="section localities-section" aria-label="Popular localities">
+    <div class="section-inner">
+      <h2 class="section-title localities-title">Popular Localities in &amp; around Chennai</h2>
+      <div class="localities-grid" id="localities-grid">
+        <button class="locality-btn">T.Nagar</button>
+        <button class="locality-btn">Nungambakkam</button>
+        <button class="locality-btn">Velachery</button>
+        <button class="locality-btn">Adyar</button>
+        <button class="locality-btn">Anna Nagar East</button>
+        <button class="locality-btn">Thuraipakkam</button>
+        <button class="locality-btn">Mylapore</button>
+        <button class="locality-btn">Alwarpet</button>
+        <button class="locality-btn">Anna Nagar West</button>
+        <button class="locality-btn">Besant Nagar</button>
+        <button class="locality-btn">Semmancheri</button>
+        <button class="locality-btn">Vadapalani</button>
+        <button class="locality-btn">Perungudi</button>
+        <button class="locality-btn">Medavakkam</button>
+        <button class="locality-btn">Egmore</button>
+        <button class="locality-btn">Royapettah</button>
+        <button class="locality-btn">Shollinganallur</button>
+        <button class="locality-btn">Guindy</button>
+        <button class="locality-btn">Kilpauk</button>
+        <button class="locality-btn">Porur</button>
+        <button class="locality-btn">Kodambakkam</button>
+        <button class="locality-btn">Gopalapuram</button>
+        <button class="locality-btn">Ashok Nagar</button>
+        <button class="locality-btn">Teynampet</button>
+        <button class="locality-btn">Pallavaram</button>
+        <button class="locality-btn">Ramapuram</button>
+        <button class="locality-btn">RA Puram</button>
+        <button class="locality-btn">Chrompet</button>
+        <button class="locality-btn">Neelangarai</button>
+        <button class="locality-btn">Navallur</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2 class="footer-logo">zomato</h2>
+        <div class="footer-locale">
+          <button class="locale-btn" id="country-btn">🇮🇳 India ▾</button>
+          <button class="locale-btn" id="lang-btn">🌐 English ▾</button>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">Who we are</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Report Fraud</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>For Foodies</h3>
+          <ul>
+            <li><a href="#">Code of Conduct</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Blogger Help</a></li>
+            <li><a href="#">Mobile Apps</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>For Restaurants</h3>
+          <ul>
+            <li><a href="#">Add Restaurant</a></li>
+            <li><a href="#">Claim your Listing</a></li>
+            <li><a href="#">Business App</a></li>
+            <li><a href="#">Restaurant Widgets</a></li>
+            <li><a href="#">Products for Businesses</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>For You</h3>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+      <p class="footer-legal">
+        By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies.
+        All trademarks are properties of their respective owners. 2008–2024 © Zomato™ Ltd. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ── AUTH MODAL ── -->
+  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-label="Authentication" hidden>
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close">&times;</button>
+
+      <div class="modal-tabs" role="tablist">
+        <button class="modal-tab active" id="tab-login" role="tab" aria-selected="true">Login</button>
+        <button class="modal-tab" id="tab-signup" role="tab" aria-selected="false">Sign Up</button>
+      </div>
+
+      <!-- Login -->
+      <div class="modal-panel" id="panel-login" role="tabpanel">
+        <p class="modal-greeting">Welcome back 👋</p>
+        <div class="field-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" placeholder="you@example.com" autocomplete="email" />
+          <span class="field-error" id="login-email-err"></span>
+        </div>
+        <div class="field-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Your password" autocomplete="current-password" />
+          <span class="field-error" id="login-pass-err"></span>
+        </div>
+        <button class="modal-cta" id="login-submit-btn">Login</button>
+        <p class="modal-alt">No account? <span class="modal-link" data-tab="signup">Sign Up</span></p>
+      </div>
+
+      <!-- Sign Up -->
+      <div class="modal-panel hidden" id="panel-signup" role="tabpanel">
+        <p class="modal-greeting">Join Zomato 🍽️</p>
+        <div class="field-group">
+          <label for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" placeholder="John Doe" autocomplete="name" />
+          <span class="field-error" id="signup-name-err"></span>
+        </div>
+        <div class="field-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" placeholder="you@example.com" autocomplete="email" />
+          <span class="field-error" id="signup-email-err"></span>
+        </div>
+        <div class="field-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" placeholder="Min. 6 characters" autocomplete="new-password" />
+          <span class="field-error" id="signup-pass-err"></span>
+        </div>
+        <button class="modal-cta" id="signup-submit-btn">Create Account</button>
+        <p class="modal-alt">Already a member? <span class="modal-link" data-tab="login">Login</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TOAST ── -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
